@@ -7,6 +7,7 @@ from discord import Game
 from discord.ext import commands, tasks
 import datetime
 from itertools import cycle
+import os
 
 
 Client = discord.client
