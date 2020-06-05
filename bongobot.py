@@ -7,30 +7,30 @@ from discord.ext import commands, tasks
 import datetime
 from itertools import cycle
 import os
-
-
+ 
+ 
 Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
 client.remove_command('help')
 status = cycle(['Naar twitch.tv/rensjuhgamed kijken!', 'Op de bongo spelen!'])
-
-
+ 
+ 
 @client.event
 async def on_ready():
     change_status.start()
     print('Klaar om op de bongo te spelen')
-    
+   
 @tasks.loop(seconds=10)
 async def change_status():
     await client.change_presence(activity=discord.Game(next(status)))
-
-
+ 
+ 
 @client.event
 async def on_member_join(member):
     await member.send(f"{member.mention} Welkom op **{member.guild}**:tada:. *Klik op deze link voor belangrijke informatie:* https://discord.gg/hRxeYVS")
-
-    
+ 
+   
 @client.event
 async def on_message(message):  
     await client.process_commands(message)
@@ -56,14 +56,11 @@ async def on_message(message):
     if message.content == '!poep':
         await message.channel.send(f'https://bit.ly/306vlYE')
     if message.content == '!youtube':
-        await message.channel.send(f'https://bit.ly/2MSjshZ') 
+        await message.channel.send(f'https://bit.ly/2MSjshZ')
     if message.content == '!bongo':
         await message.channel.send(f'https://bit.ly/2z2H27q')
-    if (message.content.lower() == "!yell"):
-    msg = "!test"
-    await client.send_message(message.channel, msg)
-        
-
+       
+ 
 @client.command()
 @commands.has_role('📌Staff')
 async def verwijder(ctx, amount=5):
@@ -74,34 +71,34 @@ async def verwijder(ctx, amount=5):
  
  
 @client.command()
-@commands.has_role('📌Staff') 
-async def kick(ctx, member : discord.Member, * , reason=None): 
+@commands.has_role('📌Staff')
+async def kick(ctx, member : discord.Member, * , reason=None):
  await member.kick(reason=reason)
  await ctx.send("Gekicked!", delete_after=3)
  
  
 @client.command()
-@commands.has_role('📌Staff') 
-async def ban(ctx, member: discord.Member, *, reason = None): 
+@commands.has_role('📌Staff')
+async def ban(ctx, member: discord.Member, *, reason = None):
  await member.ban(reason=reason)
  await ctx.send("Gebanned!", delete_after=3)
-
-
+ 
+ 
 @client.command()
-@commands.has_role('📌Staff') 
+@commands.has_role('📌Staff')
 async def unban(ctx, userx: int):
  ban_list = await ctx.guild.bans()
-
+ 
  for users in ban_list:
-
+ 
    user = users.user
-
+ 
    if user.id == userx:
-    
+   
      await ctx.guild.unban(user)    
  await ctx.send("Geunbanned!", delete_after=3)
-
-
+ 
+ 
 @client.command(pass_context=True)
 async def help(ctx):
     author = ctx.message.author
@@ -128,8 +125,8 @@ async def help(ctx):
     embed.add_field(name='!kick', value='Kickt de persoon die stout doet', inline=False)
     embed.add_field(name='!ban', value='Bant de persoon die stout doet', inline=False)
     embed.add_field(name='!verwijder [aantal berichten]', value='Verwijder het aantal berichten dat jij invoert!', inline=False)
-    
-    
+   
+   
     await author.send(embed = embed)
-
+ 
 client.run(os.getenv('TOKEN'))
