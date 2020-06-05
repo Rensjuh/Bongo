@@ -129,4 +129,4 @@ async def help(ctx):
     
     await author.send(embed = embed)
 
-client.run(
+client.run(os.getenv('TOKEN'))
