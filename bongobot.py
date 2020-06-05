@@ -3,7 +3,6 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 import asyncio
 import random
-from discord import GameZ X
 from discord.ext import commands, tasks
 import datetime
 from itertools import cycle
@@ -130,4 +129,4 @@ async def help(ctx):
     
     await author.send(embed = embed)
 
-client.run(os.getenv('TOKEN'))
+client.run('NjI4MjYyNTUyOTQxNjI1MzU0.XtolQA.lokXZHlBNrVRhzZ68GfbxDoAZb4')
