@@ -36,7 +36,7 @@ async def on_member_join(member):
 async def on_message(message):  
     await client.process_commands(message)
     if message.content.startswith('!gelukskoekje'):
-        randomlist = ["je ademt vandaag", "je stoot vandaag je kleine teen", "je eet vandaag een frikandelbroodje", "je gaat vandaag Roblox spelen", "Je wint een potje Skywars", "Rens doet vandaag een stream <:pog:693880370256412803>", "Je stinkt naar bedorven kaas", "Rens upload een <:yt:638120086229483524> video!", "Je haalt een ace in valorant<:hehe:642056042280386570>"]
+        randomlist = ["je ademt vandaag", "je stoot vandaag je kleine teen", "je eet vandaag een frikandelbroodje", "je gaat vandaag Roblox spelen", "Je wint een potje Skywars", "Rens doet vandaag een stream <:pog:693880370256412803>", "Je stinkt naar bedorven kaas", "Rens upload een <:yt:638120086229483524> video!"]
         await message.channel.send(random.choice(randomlist))
     if message.content.startswith('!vsco'):
         randomlist = ["sksksk", "and i oop", "SAVE THE TURTLES"]
