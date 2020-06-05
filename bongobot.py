@@ -129,4 +129,4 @@ async def help(ctx):
     
     await author.send(embed = embed)
 
-client.run('NjI4MjYyNTUyOTQxNjI1MzU0.XtolQA.lokXZHlBNrVRhzZ68GfbxDoAZb4')
+client.run(
