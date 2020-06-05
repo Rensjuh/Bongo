@@ -13,7 +13,7 @@ Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
 client.remove_command('help')
-status = cycle(['Naar twitch.tv/rensjuhgamed kijken!', 'Op de bongo!'])
+status = cycle(['Naar twitch.tv/rensjuhgamed kijken!', 'Op de bongo spelen!'])
 
 
 @client.event
@@ -35,7 +35,7 @@ async def on_member_join(member):
 async def on_message(message):  
     await client.process_commands(message)
     if message.content.startswith('!gelukskoekje'):
-        randomlist = ["je ademt vandaag", "je stoot vandaag je kleine teen", "je eet vandaag een frikandelbroodje", "je gaat vandaag Roblox spelen", "Je wint een potje Skywars", "Rens doet vandaag een stream <:pog:693880370256412803>", "Je stinkt naar bedorven kaas", "Rens upload een <:yt:638120086229483524> video!", "Je wordt gebackseatgamed door <@498863856257597441> <:xd:642056427967348746>"]
+        randomlist = ["je ademt vandaag", "je stoot vandaag je kleine teen", "je eet vandaag een frikandelbroodje", "je gaat vandaag Roblox spelen", "Je wint een potje Skywars", "Rens doet vandaag een stream <:pog:693880370256412803>", "Je stinkt naar bedorven kaas", "Rens upload een <:yt:638120086229483524> video!"]
         await message.channel.send(random.choice(randomlist))
     if message.content.startswith('!vsco'):
         randomlist = ["sksksk", "and i oop", "SAVE THE TURTLES"]
@@ -59,6 +59,9 @@ async def on_message(message):
         await message.channel.send(f'https://bit.ly/2MSjshZ') 
     if message.content == '!bongo':
         await message.channel.send(f'https://bit.ly/2z2H27q')
+    if (message.content.lower() == "!yell"):
+    msg = "!test"
+    await client.send_message(message.channel, msg)
         
 
 @client.command()
@@ -97,6 +100,12 @@ async def unban(ctx, userx: int):
     
      await ctx.guild.unban(user)    
  await ctx.send("Geunbanned!", delete_after=3)
+ 
+
+@bot.event
+async def on_message(message):
+    if message.content.find('!help'):
+        await bot.add_reaction(message, '<:vinkje:718440317132734636>')
 
 
 @client.command(pass_context=True)
