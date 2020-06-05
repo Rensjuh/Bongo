@@ -100,12 +100,6 @@ async def unban(ctx, userx: int):
     
      await ctx.guild.unban(user)    
  await ctx.send("Geunbanned!", delete_after=3)
- 
-
-@bot.event
-async def on_message(message):
-    if message.content.find('!help'):
-        await bot.add_reaction(message, '<:vinkje:718440317132734636>')
 
 
 @client.command(pass_context=True)
