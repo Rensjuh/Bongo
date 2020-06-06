@@ -68,7 +68,6 @@ async def verwijder(ctx, amount=5):
  await ctx.channel.purge(limit=amount+1)
  amount = str(amount)
  await ctx.send(amount+" bericht(en) verwijderd!", delete_after=3)
- await ctx.message.add_reaction("✅")
  
  
 @client.command()
@@ -76,7 +75,6 @@ async def verwijder(ctx, amount=5):
 async def kick(ctx, member : discord.Member, * , reason=None):
  await member.kick(reason=reason)
  await ctx.send("Gekicked!", delete_after=3)
- await ctx.message.add_reaction("✅")
  
  
 @client.command()
@@ -84,7 +82,6 @@ async def kick(ctx, member : discord.Member, * , reason=None):
 async def ban(ctx, member: discord.Member, *, reason = None):
  await member.ban(reason=reason)
  await ctx.send("Gebanned!", delete_after=3)
- await ctx.message.add_reaction("✅")
  
  
 @client.command()
@@ -100,7 +97,6 @@ async def unban(ctx, userx: int):
    
      await ctx.guild.unban(user)    
  await ctx.send("Geunbanned!", delete_after=3)
- await ctx.message.add_reaction("✅")
  
  
 @client.command(pass_context=True)
