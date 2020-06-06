@@ -128,5 +128,6 @@ async def help(ctx):
    
    
     await author.send(embed = embed)
+    await ctx.message.add_reaction("✅")
  
 client.run(os.getenv('TOKEN'))
