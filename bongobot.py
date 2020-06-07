@@ -61,6 +61,8 @@ async def on_message(message):
         await message.channel.send(f'https://bit.ly/2z2H27q')
     if message.content == '!ulla':
         await message.channel.send(f'https://bit.ly/379SpY3')
+    if message.content == '!twitter':
+        await message.channel.send(f'https://bit.ly/2UjS5AN')
        
  
 @client.command()
@@ -116,6 +118,7 @@ async def help(ctx):
     embed.add_field(name='!ulla', value='🐈', inline=False)
     embed.add_field(name='!help', value='Laat dit zien!', inline=False)
     embed.add_field(name='!poep', value='P O E P!', inline=False)
+    embed.add_field(name='!twitter', value='<:twitter:640157206464954368>', inline=False)
     embed.add_field(name='!moskau', value='Het goddelijkste lied op deze aardebol!', inline=False)
     embed.add_field(name='!twitch', value=':wink:', inline=False)
     embed.add_field(name='!youtube', value=':100:', inline=False)
