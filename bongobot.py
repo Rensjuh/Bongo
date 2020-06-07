@@ -59,6 +59,8 @@ async def on_message(message):
         await message.channel.send(f'https://bit.ly/2MSjshZ')
     if message.content == '!bongo':
         await message.channel.send(f'https://bit.ly/2z2H27q')
+    if message.content == '!ulla':
+        await message.channel.send(f'https://bit.ly/379SpY3')
        
  
 @client.command()
@@ -111,6 +113,7 @@ async def help(ctx):
     embed.add_field(name='***Member commands***', value='~~-------------------~~', inline=False)
     embed.add_field(name='!gelukskoekje', value='Wat ga jij vandaag meemaken?', inline=False)
     embed.add_field(name='!bongo', value='🥁', inline=False)
+    embed.add_field(name='!ulla', value='🐈', inline=False)
     embed.add_field(name='!help', value='Laat dit zien!', inline=False)
     embed.add_field(name='!poep', value='P O E P!', inline=False)
     embed.add_field(name='!moskau', value='Het goddelijkste lied op deze aardebol!', inline=False)
