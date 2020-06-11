@@ -108,6 +108,11 @@ async def unban(ctx, userx: int):
      await ctx.guild.unban(user)    
  await ctx.send("Geunbanned!", delete_after=3)
  
+ @client.command(pass_context=True)
+async def aai(ctx):
+    global counter
+    counter += 1
+ 
  
 @client.command(pass_context=True)
 async def help(ctx):
