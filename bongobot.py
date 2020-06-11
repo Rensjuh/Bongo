@@ -43,10 +43,10 @@ async def on_message(message):
     if message.content == '!ewa':
         await message.channel.send(f'{message.author.name} ewa niffo!')
     if message.content.startswith('!coinflip'):
-        randomlist = ["Kop", "Munt"]
+        randomlist = ["Kop<:kop:720560457391276052>", "Munt<:munt:720560561154424932>"]
         await message.channel.send(random.choice(randomlist))
     if message.content.startswith('!cf'):
-        randomlist = ["Kop", "Munt"]
+        randomlist = ["Kop<:kop:720560457391276052>", "Munt<:munt:720560561154424932>"]
         await message.channel.send(random.choice(randomlist))
     if message.content.startswith('!pingme'):
         await message.channel.send(f'{message.author.mention} fakka')
