@@ -42,6 +42,12 @@ async def on_message(message):
         await message.channel.send(random.choice(randomlist))
     if message.content == '!ewa':
         await message.channel.send(f'{message.author.name} ewa niffo!')
+    if message.content.startswith('!coinflip'):
+        randomlist = ["Kop", "Munt"]
+        await message.channel.send(random.choice(randomlist))
+    if message.content.startswith('!cf'):
+        randomlist = ["Kop", "Munt"]
+        await message.channel.send(random.choice(randomlist))
     if message.content.startswith('!pingme'):
         await message.channel.send(f'{message.author.mention} fakka')
     if message.content == '!author':
