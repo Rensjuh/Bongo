@@ -131,6 +131,7 @@ async def help(ctx):
     embed.add_field(name='!vsco', value='rEd De sChIlDpAdPaDdEn', inline=False)
     embed.add_field(name='!lenny', value=' ͡° ͜ʖ ͡°', inline=False)
     embed.add_field(name='!author', value=':wink:', inline=False)
+    embed.add_field(name='!coinflip', value='Kun je niet beslissen? Laat het lot voor je beslissen!<:kop:720560457391276052>', inline=False)
     embed.add_field(name='!ewa', value=':sunglasses:', inline=False)
     embed.add_field(name='!pingme', value='fakka:sunglasses:', inline=False)
     embed.add_field(name='***Staff commands***', value='~~-------------------~~', inline=False)
