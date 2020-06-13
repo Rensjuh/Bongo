@@ -44,6 +44,8 @@ async def on_message(message):
         await message.channel.send(f'{message.author.name} ewa niffo!')
     if message.content.startswith('!coinflip'):
         randomlist = ["Kop<:kop:720560457391276052>", "Munt<:munt:720560561154424932>"]
+    if message.content.startswith('!rustchance'):
+        randomlist = ["<:blauw:721459552746340475>", "<:rood:721459537172758558>"]
         await message.channel.send(random.choice(randomlist))
     if message.content.startswith('!cf'):
         randomlist = ["Kop<:kop:720560457391276052>", "Munt<:munt:720560561154424932>"]
@@ -124,6 +126,7 @@ async def help(ctx):
     embed.add_field(name='!ulla', value='🐈', inline=False)
     embed.add_field(name='!help', value='Laat dit zien!', inline=False)
     embed.add_field(name='!poep', value='P O E P!', inline=False)
+    embed.add_field(name='!rustchance', value='Voor de verslaafde onder ons!', inline=False)
     embed.add_field(name='!twitter', value='<:twitter:640157206464954368>', inline=False)
     embed.add_field(name='!moskau', value='Het goddelijkste lied op deze aardebol!', inline=False)
     embed.add_field(name='!twitch', value='<:twitch:638119216968630283>', inline=False)
