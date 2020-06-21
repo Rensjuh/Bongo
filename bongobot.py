@@ -37,11 +37,6 @@ async def on_message(message):
     if message.content.startswith('!gelukskoekje'):
         randomlist = ["je ademt vandaag", "je stoot vandaag je kleine teen", "je eet vandaag een frikandelbroodje", "je gaat vandaag Roblox spelen", "Je wint een potje Skywars", "Rens doet vandaag een stream <:pog:693880370256412803>", "Je stinkt naar bedorven kaas", "Rens upload een <:yt:638120086229483524> video!", "Je wordt gebackseatgamed door Michiel <:feelsbadman:718811535622799370>", "wipwap", "Je stinkt, sorry", "Je wordt uitgescholden door ToxicGOD<:pepehands:720552286572511243>", "Stijn doet knophoofd<:kekw:719842435168993310>", "Victor steelt je ace<:sad:718811355733557368>", "Pim is een ei:egg:", "Victor admin aboest<:feelsbadman:718811535622799370>", "ToxicGOD vind zichzelf weer te leuk<:kekw:719842435168993310>", "Victor fietst weg van een beef<:lul:640154268409659393>", "Jens steelt je koekje<:what:718811593500131381>", "Jan-Julius steelt je lolly<:what:718811593500131381>"]
         await message.channel.send(random.choice(randomlist))
-    if message.content.startswith('!vsco'):
-        randomlist = ["sksksk", "and i oop", "SAVE THE TURTLES"]
-        await message.channel.send(random.choice(randomlist))
-    if message.content == '!ewa':
-        await message.channel.send(f'{message.author.name} ewa niffo!')
     if message.content.startswith('!coinflip'):
         randomlist = ["Kop<:kop:720560457391276052>", "Munt<:munt:720560561154424932>"]
     if message.content.startswith('!rustchance'):
@@ -50,25 +45,16 @@ async def on_message(message):
     if message.content.startswith('!cf'):
         randomlist = ["Kop<:kop:720560457391276052>", "Munt<:munt:720560561154424932>"]
         await message.channel.send(random.choice(randomlist))
-    if message.content.startswith('!pingme'):
-        await message.channel.send(f'{message.author.mention} fakka')
     if message.content == '!author':
         await message.channel.send(f'https://www.twitch.tv/rensjuhgamed')
     if message.content == '!moskau':
         await message.channel.send(f'https://bit.ly/2pKs9SN')
-    if message.content.startswith('!lenny'):
-        randomlist = ["( ͡° ͜ʖ ͡°)", "( ͡ʘ ͜ʖ ͡ʘ)", "(ง ͠° ͟ل͜ ͡°)ง", "( ͡ಥ ͜ʖ ͡ಥ)"]
-        await message.channel.send(random.choice(randomlist))
     if message.content == '!twitch':
         await message.channel.send(f'https://www.twitch.tv/rensjuhgamed')
-    if message.content == '!poep':
-        await message.channel.send(f'https://bit.ly/306vlYE')
     if message.content == '!youtube':
         await message.channel.send(f'https://bit.ly/2MSjshZ')
     if message.content == '!bongo':
         await message.channel.send(f'https://bit.ly/2z2H27q')
-    if message.content == '!ulla':
-        await message.channel.send(f'https://bit.ly/379SpY3')
     if message.content == '!twitter':
         await message.channel.send(f'https://bit.ly/2UjS5AN')
        
@@ -123,20 +109,14 @@ async def help(ctx):
     embed.add_field(name='***Member commands***', value='~~-------------------~~', inline=False)
     embed.add_field(name='!gelukskoekje', value='Wat ga jij vandaag meemaken?', inline=False)
     embed.add_field(name='!bongo', value='🥁', inline=False)
-    embed.add_field(name='!ulla', value='🐈', inline=False)
     embed.add_field(name='!help', value='Laat dit zien!', inline=False)
-    embed.add_field(name='!poep', value='P O E P!', inline=False)
     embed.add_field(name='!rustchance', value='Voor de verslaafde onder ons!', inline=False)
     embed.add_field(name='!twitter', value='<:twitter:640157206464954368>', inline=False)
     embed.add_field(name='!moskau', value='Het goddelijkste lied op deze aardebol!', inline=False)
     embed.add_field(name='!twitch', value='<:twitch:638119216968630283>', inline=False)
     embed.add_field(name='!youtube', value='<:yt:638120086229483524>', inline=False)
-    embed.add_field(name='!vsco', value='rEd De sChIlDpAdPaDdEn', inline=False)
-    embed.add_field(name='!lenny', value=' ͡° ͜ʖ ͡°', inline=False)
     embed.add_field(name='!author', value=':wink:', inline=False)
     embed.add_field(name='!coinflip', value='Kun je niet beslissen? Laat het lot voor je beslissen!<:kop:720560457391276052>', inline=False)
-    embed.add_field(name='!ewa', value=':sunglasses:', inline=False)
-    embed.add_field(name='!pingme', value='fakka:sunglasses:', inline=False)
     embed.add_field(name='***Staff commands***', value='~~-------------------~~', inline=False)
     embed.add_field(name='!kick', value='Kickt de persoon die stout doet', inline=False)
     embed.add_field(name='!ban', value='Bant de persoon die stout doet', inline=False)
