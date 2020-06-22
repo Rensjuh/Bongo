@@ -57,6 +57,8 @@ async def on_message(message):
         await message.channel.send(f'https://bit.ly/2z2H27q')
     if message.content == '!twitter':
         await message.channel.send(f'https://bit.ly/2UjS5AN')
+    if message.content == '!ping':
+        await message.channel.send(f'Pong! {client.latency}')
        
  
 @client.command()
