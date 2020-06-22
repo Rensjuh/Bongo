@@ -113,6 +113,7 @@ async def help(ctx):
     embed.add_field(name='!bongo', value='🥁', inline=False)
     embed.add_field(name='!help', value='Laat dit zien!', inline=False)
     embed.add_field(name='!rustchance', value='Voor de verslaafde onder ons!', inline=False)
+    embed.add_field(name='!ping', value='🏓', inline=False)                                        
     embed.add_field(name='!twitter', value='<:twitter:640157206464954368>', inline=False)
     embed.add_field(name='!moskau', value='Het goddelijkste lied op deze aardebol!', inline=False)
     embed.add_field(name='!twitch', value='<:twitch:638119216968630283>', inline=False)
