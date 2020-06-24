@@ -45,8 +45,6 @@ async def on_message(message):
     if message.content.startswith('!cf'):
         randomlist = ["Kop<:kop:720560457391276052>", "Munt<:munt:720560561154424932>"]
         await message.channel.send(random.choice(randomlist))
-    if message.content == '!author':
-        await message.channel.send(f'https://www.twitch.tv/rensjuhgamed')
     if message.content == '!moskau':
         await message.channel.send(f'https://bit.ly/2pKs9SN')
     if message.content == '!twitch':
@@ -118,7 +116,6 @@ async def help(ctx):
     embed.add_field(name='!moskau', value='Het goddelijkste lied op deze aardebol!', inline=False)
     embed.add_field(name='!twitch', value='<:twitch:638119216968630283>', inline=False)
     embed.add_field(name='!youtube', value='<:yt:638120086229483524>', inline=False)
-    embed.add_field(name='!author', value=':wink:', inline=False)
     embed.add_field(name='!coinflip', value='Kun je niet beslissen? Laat het lot voor je beslissen!<:kop:720560457391276052>', inline=False)
     embed.add_field(name='***Staff commands***', value='~~-------------------~~', inline=False)
     embed.add_field(name='!kick', value='Kickt de persoon die stout doet', inline=False)
