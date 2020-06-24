@@ -39,9 +39,6 @@ async def on_message(message):
         await message.channel.send(random.choice(randomlist))
     if message.content.startswith('!coinflip'):
         randomlist = ["Kop<:kop:720560457391276052>", "Munt<:munt:720560561154424932>"]
-    if message.content.startswith('!rustchance'):
-        randomlist = ["<:blauw:721459552746340475>", "<:rood:721459537172758558>"]
-        await message.channel.send(random.choice(randomlist))
     if message.content.startswith('!cf'):
         randomlist = ["Kop<:kop:720560457391276052>", "Munt<:munt:720560561154424932>"]
         await message.channel.send(random.choice(randomlist))
