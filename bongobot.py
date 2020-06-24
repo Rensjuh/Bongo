@@ -60,6 +60,7 @@ async def on_message(message):
     if message.content.startswith('!8ball'):
         randomlist = ["Zeker", "Concentreer je en vraag het opnieuw", "Zonder twijfel", "Erg twijfelachtig", "Vertrouw er niet op", "Het is zeker", "Zoals ik het zie ja", "Mijn bronnen zeggen nee", "Kan ik niet voorspellen", "Tekenen wijzen op ja"]
     await message.channel.send(random.choice(randomlist))
+    await ctx.message.add_reaction("🎱")
     
        
  
