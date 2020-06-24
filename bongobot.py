@@ -59,7 +59,7 @@ async def on_message(message):
         await message.channel.send(f'Pong! {round(client.latency * 1000)}ms')
     if message.content.startswith('!8ball'):
         randomlist = ["Zeker", "Concentreer je en vraag het opnieuw", "Zonder twijfel", "Erg twijfelachtig", "Vertrouw er niet op", "Het is zeker", "Zoals ik het zie ja", "Mijn bronnen zeggen nee", "Kan ik niet voorspellen", "Tekenen wijzen op ja"]
-    if message.content.startswith('!rustchance'):
+    await message.channel.send(random.choice(randomlist))
     
        
  
