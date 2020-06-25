@@ -13,7 +13,7 @@ Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
 client.remove_command('help')
-status = cycle(['Naar twitch.tv/rensjuhgamed kijken!', 'Op de bongo!', '!help'])
+status = cycle(['naar twitch.tv/rensjuhgamed kijken!', 'op de bongo!', '!help'])
  
  
 @client.event
