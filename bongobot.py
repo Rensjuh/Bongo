@@ -58,6 +58,9 @@ async def on_message(message):
     if message.content.startswith('!rustchance'):
         randomlist = ["<:blauw:721459552746340475>", "<:rood:721459537172758558>"]
         await message.channel.send(random.choice(randomlist))
+    if message.content.startswith('!:8ball:'):
+        randomlist = ["Zeker", "Concentreer je en vraag het opnieuw", "Zonder twijfel", "Erg twijfelachtig", "Vertrouw er niet op", "Het is zeker", "Zoals ik het zie ja", "Mijn bronnen zeggen nee", "Kan ik niet voorspellen", "Tekenen wijzen op ja"]
+        await message.channel.send(random.choice(randomlist))
     
        
  
