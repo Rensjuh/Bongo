@@ -29,6 +29,15 @@ async def change_status():
 @client.event
 async def on_member_join(member):
     await member.send(f"{member.mention} Welkom op **{member.guild}**:tada:. *Klik op deze link voor belangrijke informatie:* https://discord.gg/hRxeYVS")
+  
+@client.event
+async def on_message(message):
+    if message.content.startswith('!duim'):
+        channel = message.channel
+        await channel.send('Send me that 👍 reaction, mate')
+
+        def check(reaction, user):
+            return user == message.author and str(reaction.emoji) == '👍'
  
    
 @client.event
