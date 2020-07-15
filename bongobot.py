@@ -13,7 +13,7 @@ Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
 client.remove_command('help')
-status = cycle(['naar twitch.tv/rensjuhgamed kijken!', 'op de bongo!', '!help'])
+status = cycle(['twitch.tv/rensjuhgamed'])
  
  
 @client.event
@@ -23,7 +23,7 @@ async def on_ready():
    
 @tasks.loop(seconds=10)
 async def change_status():
-    await client.change_presence(activity=discord.stream(next(status)))
+    await client.change_presence(activity=discord.Stream(next(status)))
  
  
 @client.event
