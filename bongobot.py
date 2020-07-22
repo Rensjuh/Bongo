@@ -48,6 +48,8 @@ async def on_message(message):
         await message.channel.send(f'https://bit.ly/2MSjshZ')
     if message.content == '!bongo':
         await message.channel.send(f'https://bit.ly/2z2H27q')
+    if message.content == '!merch':
+        await message.channel.send(f'https://bit.ly/3eOASXp')
     if message.content == '!twitter':
         await message.channel.send(f'https://bit.ly/2UjS5AN')
     if message.content == '!ping':
@@ -115,6 +117,7 @@ async def help(ctx):
     embed.add_field(name='!gelukskoekje', value='Wat ga jij vandaag meemaken?', inline=False)
     embed.add_field(name='!bongo', value='🥁', inline=False)
     embed.add_field(name='!help', value='Laat dit zien!', inline=False)
+    embed.add_field(name='!merch', value='👕', inline=False)
     embed.add_field(name='!ping', value='🏓', inline=False)
     embed.add_field(name='!8ball [bericht]', value='🎱 heeft op elke vraag een antwoord!', inline=False)    
     embed.add_field(name='!twitter', value='<:twitter:640157206464954368>', inline=False)
