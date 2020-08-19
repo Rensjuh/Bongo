@@ -13,7 +13,7 @@ Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
 client.remove_command('help')
-status = cycle(['naar twitch.tv/rensjuhgamed kijken!', 'op de bongo!', '!help'])
+status = cycle(['Naar twitch.tv/rensjuhgamed kijken!', 'Op de bongo!', '!help'])
  
  
 @client.event
@@ -37,33 +37,20 @@ async def on_message(message):
     if message.content.startswith('!gelukskoekje'):
         randomlist = ["je ademt vandaag", "je stoot vandaag je kleine teen", "je eet vandaag een frikandelbroodje", "je gaat vandaag Roblox spelen", "Je wint een potje Skywars", "Rens doet vandaag een stream <:pog:693880370256412803>", "Je stinkt naar bedorven kaas", "Rens upload een <:yt:638120086229483524> video!", "Je wordt gebackseatgamed door Michiel <:feelsbadman:718811535622799370>", "wipwap", "Je stinkt, sorry", "Je wordt uitgescholden door ToxicGOD<:pepehands:720552286572511243>", "Stijn doet knophoofd<:kekw:719842435168993310>", "Victor steelt je ace<:sad:718811355733557368>", "Pim is een ei:egg:", "Victor admin aboest<:feelsbadman:718811535622799370>", "ToxicGOD vind zichzelf weer te leuk<:kekw:719842435168993310>", "Victor fietst weg van een beef<:lul:640154268409659393>", "Jens steelt je koekje<:what:718811593500131381>", "Jan-Julius steelt je lolly<:what:718811593500131381>"]
         await message.channel.send(random.choice(randomlist))
-    if message.content.startswith('!coinflip'):
-        randomlist = ["Kop<:kop:720560457391276052>", "Munt<:munt:720560561154424932>"]
-    if message.content.startswith('!cf'):
-        randomlist = ["Kop<:kop:720560457391276052>", "Munt<:munt:720560561154424932>"]
-        await message.channel.send(random.choice(randomlist))
+    if message.content == '!author':
+        await message.channel.send(f'https://www.twitch.tv/rensjuhgamed')
+    if message.content == '!moskau':
+        await message.channel.send(f'https://bit.ly/2pKs9SN')
     if message.content == '!twitch':
         await message.channel.send(f'https://www.twitch.tv/rensjuhgamed')
     if message.content == '!youtube':
         await message.channel.send(f'https://bit.ly/2MSjshZ')
     if message.content == '!bongo':
         await message.channel.send(f'https://bit.ly/2z2H27q')
-    if message.content == '!merch':
-        await message.channel.send(f'https://bit.ly/3eOASXp')
     if message.content == '!twitter':
         await message.channel.send(f'https://bit.ly/2UjS5AN')
     if message.content == '!ping':
-        await message.channel.send(f'Pong! {round(client.latency * 1000)}ms')
-    if message.content.startswith('!8ball'):
-        randomlist = ["Zeker", "Concentreer je en vraag het opnieuw", "Zonder twijfel", "Erg twijfelachtig", "Vertrouw er niet op", "Het is zeker", "Zoals ik het zie ja", "Mijn bronnen zeggen nee", "Kan ik niet voorspellen", "Tekenen wijzen op ja"]
-        await message.channel.send(random.choice(randomlist))
-    if message.content.startswith('!rustchance'):
-        randomlist = ["<:blauw:721459552746340475>", "<:rood:721459537172758558>"]
-        await message.channel.send(random.choice(randomlist))
-    if message.content.startswith('!:8ball:'):
-        randomlist = ["Zeker", "Concentreer je en vraag het opnieuw", "Zonder twijfel", "Erg twijfelachtig", "Vertrouw er niet op", "Het is zeker", "Zoals ik het zie ja", "Mijn bronnen zeggen nee", "Kan ik niet voorspellen", "Tekenen wijzen op ja"]
-        await message.channel.send(random.choice(randomlist))
-    
+        await message.channel.send(f'Pong! {client.latency}')
        
  
 @client.command()
@@ -117,12 +104,12 @@ async def help(ctx):
     embed.add_field(name='!gelukskoekje', value='Wat ga jij vandaag meemaken?', inline=False)
     embed.add_field(name='!bongo', value='🥁', inline=False)
     embed.add_field(name='!help', value='Laat dit zien!', inline=False)
-    embed.add_field(name='!merch', value='👕', inline=False)
-    embed.add_field(name='!ping', value='🏓', inline=False)
-    embed.add_field(name='!8ball [bericht]', value='🎱 heeft op elke vraag een antwoord!', inline=False)    
+    embed.add_field(name='!rustchance', value='Voor de verslaafde onder ons!', inline=False)
     embed.add_field(name='!twitter', value='<:twitter:640157206464954368>', inline=False)
+    embed.add_field(name='!moskau', value='Het goddelijkste lied op deze aardebol!', inline=False)
     embed.add_field(name='!twitch', value='<:twitch:638119216968630283>', inline=False)
     embed.add_field(name='!youtube', value='<:yt:638120086229483524>', inline=False)
+    embed.add_field(name='!author', value=':wink:', inline=False)
     embed.add_field(name='!coinflip', value='Kun je niet beslissen? Laat het lot voor je beslissen!<:kop:720560457391276052>', inline=False)
     embed.add_field(name='***Staff commands***', value='~~-------------------~~', inline=False)
     embed.add_field(name='!kick', value='Kickt de persoon die stout doet', inline=False)
@@ -133,4 +120,4 @@ async def help(ctx):
     await author.send(embed = embed)
     await ctx.message.add_reaction("✅")
  
-client.run(os.getenv('TOKEN'))
+client.run(os.environ['token'])
